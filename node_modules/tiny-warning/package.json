@@ -1,0 +1,48 @@
+{
+  "name": "tiny-warning",
+  "version": "1.0.2",
+  "keywords": [
+    "warning",
+    "warn"
+  ],
+  "description": "A tiny warning function",
+  "main": "dist/tiny-warning.cjs.js",
+  "module": "dist/tiny-warning.esm.js",
+  "sideEffects": false,
+  "files": [
+    "/dist",
+    "/src"
+  ],
+  "author": "Alex Reardon <alexreardon@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexreardon/tiny-warning.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn jest",
+    "lint": "yarn prettier --debug-check src/** test/**",
+    "typecheck": "yarn flow",
+    "validate": "yarn lint && yarn flow",
+    "build:clean": "rimraf dist",
+    "build:flow": "echo \"// @flow\n\nexport * from '../src';\" > dist/tiny-warning.cjs.js.flow",
+    "build:dist": "yarn rollup --config rollup.config.js",
+    "build": "yarn build:clean && yarn build:dist && yarn build:flow",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "flow-bin": "0.89.0",
+    "jest": "^23.6.0",
+    "prettier": "1.15.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.68.0",
+    "rollup-plugin-babel": "^4.1.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-uglify": "^6.0.0"
+  }
+}

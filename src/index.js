@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Switch, Router, Route } from "react-router-dom";
+import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 import routes from "./routes.js";
-import { createBrowserHistory } from "history";
 import Header from "./Header";
 import "./styles.css";
 
@@ -15,7 +14,7 @@ function App() {
     <AuthContext.Provider value={{ isLoggedIn, setLoggedIn }}>
       Is logged in? {JSON.stringify(isLoggedIn)}
       <div className="App">
-        <Router history={createBrowserHistory()}>
+        <Router>
           <Header />
 
           <Switch>
