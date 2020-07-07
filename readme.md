@@ -1,7 +1,7 @@
 “indreklasn/react-fire-auth-example is being sponsored by the following tool; please help to support us by taking a look and signing up to a free trial”
 <!--
-<a href="https://tracking.gitads.io/?repo=indreklasn/react-fire-auth-example">
- <img src="https://images.gitads.io/indreklasn/react-fire-auth-example" alt="GitAds"/> </a>
+<a href="https://tracking.gitads.io/?repo=indreklasn+react-fire-auth-example">
+ <img src="https://images.gitads.io/indreklasn+react-fire-auth-example" alt="GitAds"/> </a>
 -->
 
 
